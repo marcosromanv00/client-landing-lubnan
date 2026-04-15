@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import Image from "next/image";
 import { fadeIn, staggerContainer, textVariant } from "@/lib/animations";
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="h-full py-24 bg-transparent overflow-hidden">
       <motion.div
         variants={staggerContainer(0.2, 0.1)}
         initial="hidden"
@@ -55,15 +56,17 @@ export default function Testimonials() {
             </div>
             
             <blockquote className="text-2xl md:text-3xl font-display font-medium text-obsidian leading-relaxed mb-10 italic">
-              "Una joya culinaria en San José. El Shawarma Royal es, sin duda, el mejor que he probado fuera de Beirut. El ambiente te transporta instantáneamente al Líbano."
+              &quot;Una joya culinaria en San José. El Shawarma Royal es, sin duda, el mejor que he probado fuera de Beirut. El ambiente te transporta instantáneamente al Líbano.&quot;
             </blockquote>
             
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-gray-200 mb-4 border-2 border-brand-red p-1">
-                <img 
+              <div className="w-16 h-16 rounded-full bg-gray-200 mb-4 border-2 border-brand-red p-1 relative overflow-hidden">
+                <Image 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" 
                   alt="Cliente"
-                  className="w-full h-full rounded-full object-cover"
+                  width={64}
+                  height={64}
+                  className="rounded-full object-cover"
                 />
               </div>
               <h4 className="font-bold text-obsidian uppercase tracking-wide">Juan Carlos Quesada</h4>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { fadeIn, staggerContainer, textVariant } from "@/lib/animations";
 
 export default function Products() {
@@ -28,7 +29,7 @@ export default function Products() {
   ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="h-full py-24 bg-transparent overflow-hidden">
       <motion.div
         variants={staggerContainer(0.2, 0.1)}
         initial="hidden"
@@ -70,9 +71,11 @@ export default function Products() {
               className="group cursor-pointer"
             >
               <div className="bg-limestone aspect-square rounded-full p-2 flex items-center justify-center shadow-inner group-hover:shadow-2xl transition-all duration-500 overflow-hidden relative border-4 border-transparent group-hover:border-brand-red/10">
-                <img 
+                <Image 
                   src={product.image} 
                   alt={product.name}
+                  width={300}
+                  height={300}
                   className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />

@@ -33,7 +33,7 @@ const events = [
 
 export default function Events() {
   return (
-    <section className="py-24 bg-obsidian text-white overflow-hidden">
+    <section className="h-full py-24 bg-transparent text-white overflow-hidden">
       <motion.div
         variants={staggerContainer(0.2, 0.1)}
         initial="hidden"
