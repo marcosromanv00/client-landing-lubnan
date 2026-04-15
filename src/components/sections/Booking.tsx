@@ -5,7 +5,7 @@ import { fadeIn, staggerContainer, textVariant } from "@/lib/animations";
 
 export default function Booking() {
   return (
-    <section className="py-24 bg-limestone overflow-hidden">
+    <section className="h-full py-24 bg-transparent overflow-hidden">
       <motion.div
         variants={staggerContainer(0.2, 0.1)}
         initial="hidden"

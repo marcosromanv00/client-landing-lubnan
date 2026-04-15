@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Brand Col */}
           <motion.div variants={fadeIn("up", 0.1)} className="space-y-8">
-            <h2 className="text-4xl font-display font-bold tracking-[0.2em] uppercase text-brand-red">Lubnan</h2>
+            <h2 className="text-4xl font-display font-medium tracking-[0.3em] uppercase text-golden-hummus">Lubnan</h2>
             <p className="text-gray-400 text-sm leading-relaxed font-body max-w-xs uppercase tracking-widest text-[10px]">
               Experiencia culinaria libanesa de lujo en el corazón de Costa Rica. Pasión por la tradición, elegancia en el servicio.
             </p>
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Location Col */}
           <motion.div variants={fadeIn("up", 0.2)} className="space-y-8">
-            <h3 className="text-all-caps text-xs font-bold tracking-[0.3em] text-brand-red border-b border-white/10 pb-4 inline-block">Ubicación</h3>
+            <h3 className="text-all-caps text-xs font-bold tracking-[0.4em] text-golden-hummus border-b border-ivory/10 pb-4 inline-block">Ubicación</h3>
             <ul className="space-y-6">
               <li className="flex gap-4 text-[11px] text-gray-400 uppercase tracking-widest leading-loose">
                 <MapPin size={18} className="shrink-0 text-white" />
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Contact Col */}
           <motion.div variants={fadeIn("up", 0.3)} className="space-y-8">
-            <h3 className="text-all-caps text-xs font-bold tracking-[0.3em] text-brand-red border-b border-white/10 pb-4 inline-block">Contacto</h3>
+            <h3 className="text-all-caps text-xs font-bold tracking-[0.4em] text-golden-hummus border-b border-ivory/10 pb-4 inline-block">Contacto</h3>
             <ul className="space-y-6">
               <li className="flex gap-4 text-[11px] text-gray-400 uppercase tracking-widest">
                 <Phone size={18} className="shrink-0 text-white" />
@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Hours Col */}
           <motion.div variants={fadeIn("up", 0.4)} className="space-y-8">
-            <h3 className="text-all-caps text-xs font-bold tracking-[0.3em] text-brand-red border-b border-white/10 pb-4 inline-block">Horarios</h3>
+            <h3 className="text-all-caps text-xs font-bold tracking-[0.4em] text-golden-hummus border-b border-ivory/10 pb-4 inline-block">Horarios</h3>
             <ul className="space-y-6">
               <li className="flex gap-4 text-[11px] text-gray-400 uppercase tracking-widest">
                 <Clock size={18} className="shrink-0 text-white" />
