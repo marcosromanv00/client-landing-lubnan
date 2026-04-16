@@ -9,27 +9,44 @@ export default function Products() {
     {
       name: "Hummus Tradicional",
       category: "Dip Premium",
-      image: "https://images.unsplash.com/photo-1574071318508-1cdbad80ad50?q=80&w=400&auto=format&fit=crop"
+      image: "/assets/packaged_hummus_lubnan_1776302646293.png",
     },
     {
       name: "Za'atar Artesanal",
-      category: "Especias",
-      image: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?q=80&w=400&auto=format&fit=crop"
+      category: "Especias Finas",
+      image: "/assets/packaged_zaatar_lubnan_1776302663908.png",
     },
     {
       name: "Aceite de Oliva",
-      category: "Importado",
-      image: "https://images.unsplash.com/photo-1474979266404-7eaacabc8475?q=80&w=400&auto=format&fit=crop"
+      category: "Importado de Gala",
+      image: "/assets/packaged_olive_oil_lubnan_1776302679618.png",
     },
     {
       name: "Baba Ganoush",
-      category: "Dip Premium",
-      image: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?q=80&w=400&auto=format&fit=crop"
-    }
+      category: "Gourmet Mezze",
+      image: "/assets/packaged_baba_ganoush_lubnan_1776302697423.png",
+    },
   ];
 
+  const luxuryReveal = {
+    hidden: {
+      clipPath: "inset(100% 0 0 0)",
+      opacity: 0,
+      scale: 1.1,
+    },
+    show: {
+      clipPath: "inset(0% 0 0 0)",
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 1.4,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  };
+
   return (
-    <section className="h-full py-24 bg-transparent overflow-hidden">
+    <section className="min-h-screen py-24 bg-transparent overflow-hidden">
       <motion.div
         variants={staggerContainer(0.2, 0.1)}
         initial="hidden"
@@ -38,64 +55,72 @@ export default function Products() {
         className="container-custom"
       >
         <div className="text-center mb-20">
-          <motion.span 
+          <motion.span
             variants={textVariant(0.1)}
-            className="text-brand-red text-all-caps text-xs font-bold tracking-[0.3em] mb-4 block"
+            className="text-brand-red text-all-caps text-xs font-bold tracking-[0.4em] mb-4 block"
           >
             Lleve Lubnan a su Mesa
           </motion.span>
-          <motion.h2 
+          <motion.h2
             variants={textVariant(0.2)}
-            className="text-4xl md:text-5xl font-display font-bold text-obsidian tracking-wider mb-4 uppercase"
+            className="text-5xl md:text-6xl font-display font-bold text-obsidian tracking-wider mb-4 uppercase"
           >
             Selección Gourmet
           </motion.h2>
-          <motion.div 
+          <motion.div
             variants={fadeIn("up", 0.3)}
-            className="w-20 h-1 bg-brand-red mx-auto mb-6" 
+            className="w-24 h-1 bg-brand-red mx-auto mb-8"
           />
-          <motion.p 
+          <motion.p
             variants={fadeIn("up", 0.4)}
-            className="max-w-2xl mx-auto text-gray-600 font-body leading-relaxed"
+            className="max-w-2xl mx-auto text-gray-600 font-body text-lg leading-relaxed italic"
           >
-            Nuestros productos artesanales, ahora disponibles para disfrutar el alma del Líbano en casa. Encuéntrenos en los principales supermercados gourmet de Costa Rica.
+            Nuestros productos artesanales, ahora disponibles para disfrutar el
+            alma del Líbano en casa. Una experiencia de gala en su propia
+            cocina.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {products.map((product, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {products.map((product) => (
             <motion.div
               key={product.name}
-              variants={fadeIn("up", i * 0.1)}
-              whileHover={{ y: -10 }}
-              className="group cursor-pointer"
+              variants={luxuryReveal}
+              whileHover={{ y: -15 }}
+              className="group cursor-pointer perspective-1000"
             >
-              <div className="bg-limestone aspect-square rounded-full p-2 flex items-center justify-center shadow-inner group-hover:shadow-2xl transition-all duration-500 overflow-hidden relative border-4 border-transparent group-hover:border-brand-red/10">
-                <Image 
-                  src={product.image} 
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white shadow-sm border border-ivory/20 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-700">
+                <Image
+                  src={product.image}
                   alt={product.name}
-                  width={300}
-                  height={300}
-                  className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                  fill
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110 saturate-[0.8] group-hover:saturate-100"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
-              <div className="mt-8 text-center">
-                <p className="text-[10px] text-brand-red font-bold tracking-[0.2em] mb-2 uppercase">
+              <div className="mt-10 text-center px-4">
+                <p className="text-[10px] text-brand-red font-bold tracking-[0.3em] mb-2 uppercase">
                   {product.category}
                 </p>
-                <h3 className="text-xl font-display font-bold text-obsidian uppercase tracking-wide group-hover:text-brand-red transition-colors">
+                <h3 className="text-2xl font-display font-bold text-obsidian uppercase tracking-wider group-hover:text-brand-red transition-colors duration-500">
                   {product.name}
                 </h3>
+                <div className="w-8 h-[1px] bg-gray-200 mx-auto mt-4 group-hover:w-16 group-hover:bg-brand-red transition-all duration-500" />
               </div>
             </motion.div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <button className="bg-brand-red text-white px-10 py-4 rounded-full text-all-caps text-xs font-bold transition-all hover:bg-black">
-            ¿Dónde los consigo?
-          </button>
+        <div className="mt-24 text-center">
+          <motion.button
+            variants={fadeIn("up", 0.8)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-obsidian text-white border border-ivory/10 px-16 py-5 rounded-full text-all-caps text-xs font-bold transition-all shadow-xl hover:bg-brand-red"
+          >
+            Encuéntrenos en Auto Mercado & PriceSmart
+          </motion.button>
         </div>
       </motion.div>
     </section>
