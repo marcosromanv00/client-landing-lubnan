@@ -7,15 +7,15 @@ import { fadeIn, staggerContainer, textVariant } from "@/lib/animations";
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 500], [0, 200]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const y1 = useTransform(scrollY, [0, 1000], [0, 150]);
+  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
   return (
     <section ref={containerRef} className="relative h-screen min-h-[700px] overflow-hidden bg-deep-obsidian">
       {/* Immersive Background with Parallax */}
       <motion.div 
         style={{ y: y1 }}
-        className="absolute inset-0 z-0"
+        className="absolute -top-[15%] left-0 w-full h-[130%] z-0"
       >
         <motion.div 
           initial={{ scale: 1.1, opacity: 0 }}
@@ -26,7 +26,11 @@ export default function Hero() {
             backgroundImage: `url('/assets/Foto-2-1-1-e1564518936394.jpg')`,
           }}
         >
-          <div className="absolute inset-0 bg-linear-to-b from-deep-obsidian/70 via-deep-obsidian/60 to-deep-obsidian" />
+          {/* Multiple "Aggressive" overlays for heavy cinematic mood */}
+          <div className="absolute inset-0 bg-linear-to-b from-deep-obsidian/90 via-deep-obsidian/20 to-deep-obsidian" />
+          <div className="absolute inset-0 bg-linear-to-t from-deep-obsidian via-transparent to-transparent opacity-80" />
+          <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-deep-obsidian" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,transparent_0%,rgba(10,10,10,0.8)_100%)]" />
         </motion.div>
       </motion.div>
       
@@ -82,13 +86,15 @@ export default function Hero() {
               <span className="w-1.5 h-1.5 bg-ivory rounded-full animate-pulse" />
               Reservar Mesa
             </motion.button>
-            <motion.button 
-              whileHover={{ scale: 1.02, borderColor: "#D4AF37", color: "#D4AF37" }}
-              whileTap={{ scale: 0.98 }}
-              className="border border-ivory/20 text-ivory px-14 py-5 rounded-full text-all-caps text-xs font-bold transition-all backdrop-blur-sm"
-            >
-              Ver Carta
-            </motion.button>
+            <a href="https://oddmenu.com/es/p/ilovelubnan" target="_blank" rel="noopener noreferrer">
+              <motion.button 
+                whileHover={{ scale: 1.02, borderColor: "#D4AF37", color: "#D4AF37" }}
+                whileTap={{ scale: 0.98 }}
+                className="border border-ivory/20 text-ivory px-14 py-5 rounded-full text-all-caps text-xs font-bold transition-all backdrop-blur-sm"
+              >
+                Ver Carta
+              </motion.button>
+            </a>
           </motion.div>
         </motion.div>
 

@@ -5,16 +5,16 @@ import { fadeIn, staggerContainer, textVariant } from "@/lib/animations";
 
 export default function Booking() {
   return (
-    <section className="h-full py-24 bg-transparent overflow-hidden">
+    <section className="min-h-screen py-24 bg-transparent overflow-hidden flex items-center">
       <motion.div
-        variants={staggerContainer(0.2, 0.1)}
+        variants={staggerContainer(0.05, 0)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
         className="container-custom"
       >
         <motion.div 
-          variants={fadeIn("up", 0.2)}
+          variants={fadeIn("up", 0)}
           className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100"
         >
           <div className="flex flex-col md:flex-row">

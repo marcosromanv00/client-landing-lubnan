@@ -33,7 +33,7 @@ const events = [
 
 export default function Events() {
   return (
-    <section className="h-full py-24 bg-transparent text-white overflow-hidden">
+    <section className="min-h-screen pt-24 pb-48 bg-transparent text-white overflow-hidden flex flex-col justify-center">
       <motion.div
         variants={staggerContainer(0.2, 0.1)}
         initial="hidden"

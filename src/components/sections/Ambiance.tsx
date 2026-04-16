@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { fadeIn, staggerContainer, textVariant } from "@/lib/animations";
+import { fadeIn, staggerContainer } from "@/lib/animations";
 
 export default function Ambiance() {
   return (
-    <section className="h-full py-32 bg-transparent text-ivory overflow-hidden relative">
+    <section className="min-h-screen py-32 bg-transparent text-ivory overflow-hidden relative flex items-center">
       {/* Texture Overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]" />
       

@@ -37,7 +37,7 @@ export default function Menu() {
   ];
 
   return (
-    <section className="h-full py-32 bg-transparent overflow-hidden relative" id="menu">
+    <section className="min-h-screen py-32 bg-transparent overflow-hidden relative" id="menu">
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       
@@ -80,32 +80,25 @@ export default function Menu() {
                 dish.size === "large" ? "md:col-span-12 lg:col-span-7" : "md:col-span-6 lg:col-span-5"
               } group`}
             >
-              <div className="relative overflow-hidden aspect-[16/9] mb-8 bg-deep-obsidian">
+              <div className="relative overflow-hidden aspect-[16/9] mb-8 bg-black/5 rounded-2xl">
                 <motion.div
-                  initial={{ scale: 1.2 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
                   className="w-full h-full"
                 >
                   <Image 
                     src={dish.image} 
                     alt={dish.name}
                     fill
-                    className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </motion.div>
                 
-                {/* Image Reveal Animation Overlay */}
-                <motion.div
-                  initial={{ x: "0%" }}
-                  whileInView={{ x: "100%" }}
-                  transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-                  className="absolute inset-0 bg-brand-red z-20"
-                />
-                
                 <div className="absolute top-6 right-6 z-10">
-                  <span className="bg-white/90 backdrop-blur-md px-6 py-2 rounded-full text-deep-obsidian font-display font-bold text-sm tracking-widest shadow-xl">
+                  <span className="bg-white/90 backdrop-blur-md px-6 py-2 rounded-full text-deep-obsidian font-display font-bold text-sm tracking-widest shadow-xl border border-ivory/20">
                     {dish.price}
                   </span>
                 </div>
@@ -124,14 +117,19 @@ export default function Menu() {
           ))}
         </div>
 
-        <div className="mt-32 flex justify-center">
-          <motion.button 
-            whileHover={{ letterSpacing: "0.4em" }}
-            className="group flex flex-col items-center gap-4 text-all-caps text-xs font-bold tracking-[0.2em] text-deep-obsidian transition-all"
-          >
-            <span>Descubre el menú completo</span>
-            <div className="w-12 h-[1px] bg-deep-obsidian group-hover:bg-brand-red transition-colors" />
-          </motion.button>
+        <div className="mt-16 flex justify-center">
+          <a href="https://oddmenu.com/es/p/ilovelubnan" target="_blank" rel="noopener noreferrer">
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative px-16 md:px-24 py-6 overflow-hidden bg-deep-obsidian border border-white/10 rounded-full shadow-2xl transition-all"
+            >
+              <div className="absolute inset-0 bg-brand-red translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1]" />
+              <span className="relative z-10 text-white text-all-caps text-[10px] md:text-xs font-bold tracking-[0.4em] transition-all">
+                Descubrir Menú Completo
+              </span>
+            </motion.button>
+          </a>
         </div>
       </motion.div>
     </section>
