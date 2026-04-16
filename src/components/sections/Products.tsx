@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { fadeIn, staggerContainer, textVariant } from "@/lib/animations";
 
@@ -28,23 +28,6 @@ export default function Products() {
     },
   ];
 
-  const luxuryReveal: Variants = {
-    hidden: {
-      clipPath: "inset(100% 0 0 0)",
-      opacity: 0,
-      scale: 1.1,
-    },
-    show: {
-      clipPath: "inset(0% 0 0 0)",
-      opacity: 1,
-      scale: 1,
-      transition: {
-        type: "tween" as const,
-        duration: 1.4,
-        ease: [0.16, 1, 0.3, 1] as const,
-      },
-    },
-  };
 
   return (
     <section className="min-h-screen py-24 bg-transparent overflow-hidden">
@@ -86,7 +69,7 @@ export default function Products() {
           {products.map((product) => (
             <motion.div
               key={product.name}
-              variants={luxuryReveal}
+              variants={fadeIn("up")}
               whileHover={{ y: -15 }}
               className="group cursor-pointer perspective-1000"
             >
