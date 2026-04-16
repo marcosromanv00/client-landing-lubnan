@@ -39,9 +39,9 @@ export default function Products() {
       opacity: 1,
       scale: 1,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 1.4,
-        ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
   };
