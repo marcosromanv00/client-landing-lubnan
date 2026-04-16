@@ -7,7 +7,7 @@ import { fadeIn, staggerContainer } from "@/lib/animations";
 
 export default function Footer() {
   return (
-    <footer className="bg-obsidian text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
+    <footer className="bg-deep-obsidian text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
       <motion.div
         variants={staggerContainer(0.2, 0.1)}
         initial="hidden"
@@ -16,7 +16,7 @@ export default function Footer() {
         className="container-custom"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          {/* Brand Col */}
+          {/* Col 1: Lubnan */}
           <motion.div variants={fadeIn("up", 0.1)} className="space-y-8">
             <h2 className="text-4xl font-display font-medium tracking-[0.3em] uppercase text-golden-hummus">Lubnan</h2>
             <p className="text-gray-400 text-sm leading-relaxed font-body max-w-xs uppercase tracking-widest text-[10px]">
@@ -24,60 +24,88 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               {[
-                { icon: (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                  </svg>
-                )},
-                { icon: (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                )}
+                { 
+                  name: "Instagram",
+                  href: "https://instagram.com/lubnancr",
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                  )
+                },
+                { 
+                  name: "Facebook",
+                  href: "https://facebook.com/lubnancr",
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                  )
+                }
               ].map((social, i) => (
                 <motion.a 
                   key={i}
-                  href="#" 
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Seguir en ${social.name}`}
                   whileHover={{ y: -5, scale: 1.1 }}
                   className="p-3 bg-white/5 rounded-full hover:bg-brand-red transition-all duration-300 border border-white/10"
                 >
-                  {social.icon}
+                  <div className="aria-hidden:true">
+                    {social.icon}
+                  </div>
                 </motion.a>
               ))}
             </div>
           </motion.div>
 
-          {/* Location Col */}
+          {/* Col 2: Mapa */}
           <motion.div variants={fadeIn("up", 0.2)} className="space-y-8">
-            <h3 className="text-all-caps text-xs font-bold tracking-[0.4em] text-golden-hummus border-b border-ivory/10 pb-4 inline-block">Ubicación</h3>
+            <h3 className="text-all-caps text-xs font-bold tracking-[0.4em] text-golden-hummus border-b border-ivory/10 pb-4 inline-block uppercase">Mapa</h3>
+            <div className="rounded-2xl overflow-hidden grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-700 border border-white/10 h-48 w-full group">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.98667501726!2d-84.09355442398464!3d9.93608359016628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e344e2168923%3A0xc3c9e6eb5f7710b7!2sRestaurante%20Lubnan!5e0!3m2!1ses!2s!4v1713210000000!5m2!1ses!2s" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación de Restaurante Lubnan"
+                className="transition-transform duration-700 group-hover:scale-110"
+              ></iframe>
+            </div>
+          </motion.div>
+
+          {/* Col 3: Información */}
+          <motion.div variants={fadeIn("up", 0.3)} className="space-y-8">
+            <h3 className="text-all-caps text-xs font-bold tracking-[0.4em] text-golden-hummus border-b border-ivory/10 pb-4 inline-block uppercase">Información</h3>
             <ul className="space-y-6">
               <li className="flex gap-4 text-[11px] text-gray-400 uppercase tracking-widest leading-loose">
                 <MapPin size={18} className="shrink-0 text-white" />
-                <span>Avenida Escazú, Torre 2, San José, Costa Rica. Edificio Premium Plaza, Piso 3</span>
+                <div className="flex flex-col gap-1">
+                  <span className="text-white font-bold tracking-[0.2em] mb-1">San José</span>
+                  <span>Paseo Colón, frente a la Torre Mercedes</span>
+                  <span>Diagonal al Scotiabank, Costa Rica</span>
+                </div>
               </li>
-            </ul>
-          </motion.div>
-
-          {/* Contact Col */}
-          <motion.div variants={fadeIn("up", 0.3)} className="space-y-8">
-            <h3 className="text-all-caps text-xs font-bold tracking-[0.4em] text-golden-hummus border-b border-ivory/10 pb-4 inline-block">Contacto</h3>
-            <ul className="space-y-6">
               <li className="flex gap-4 text-[11px] text-gray-400 uppercase tracking-widest">
                 <Phone size={18} className="shrink-0 text-white" />
-                <span className="hover:text-brand-red transition-colors cursor-pointer">+506 2201-2000</span>
+                <a href="tel:+50686600707" className="hover:text-brand-red transition-colors cursor-pointer">+506 8660-0707</a>
               </li>
               <li className="flex gap-4 text-[11px] text-gray-400 uppercase tracking-widest">
                 <Mail size={18} className="shrink-0 text-white" />
-                <span className="hover:text-brand-red transition-colors cursor-pointer">reservas@lubnan.cr</span>
+                <a href="mailto:info@lubnan.cr" className="hover:text-brand-red transition-colors cursor-pointer">info@lubnan.cr</a>
               </li>
             </ul>
           </motion.div>
 
-          {/* Hours Col */}
+          {/* Col 4: Horarios */}
           <motion.div variants={fadeIn("up", 0.4)} className="space-y-8">
-            <h3 className="text-all-caps text-xs font-bold tracking-[0.4em] text-golden-hummus border-b border-ivory/10 pb-4 inline-block">Horarios</h3>
+            <h3 className="text-all-caps text-xs font-bold tracking-[0.4em] text-golden-hummus border-b border-ivory/10 pb-4 inline-block uppercase">Horarios</h3>
             <ul className="space-y-6">
               <li className="flex gap-4 text-[11px] text-gray-400 uppercase tracking-widest">
                 <Clock size={18} className="shrink-0 text-white" />
