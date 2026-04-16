@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { fadeIn, staggerContainer, textVariant } from "@/lib/animations";
 
@@ -28,7 +28,7 @@ export default function Products() {
     },
   ];
 
-  const luxuryReveal = {
+  const luxuryReveal: Variants = {
     hidden: {
       clipPath: "inset(100% 0 0 0)",
       opacity: 0,
@@ -40,7 +40,7 @@ export default function Products() {
       scale: 1,
       transition: {
         duration: 1.4,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
   };
