@@ -8,28 +8,28 @@ export default function Menu() {
   const dishes = [
     {
       name: "Mezze Platter",
-      desc: "Una sinfonía de texturas: Hummus sedoso, mutabal ahumado, falafel artesanal y la frescura del Líbano en cada bocado.",
+      desc: "Una sinfonía de texturas 100% libres de gluten: Hummus sedoso, mutabal ahumado, falafel artesanal y la frescura del Líbano en cada bocado.",
       price: "₡12,000",
       image: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?q=80&w=800&auto=format&fit=crop",
       size: "large"
     },
     {
       name: "Kibbeh Nayyeh",
-      desc: "La joya de la corona: Carne premium finamente seleccionada, trigo burgol y un bouquet de especias secretas.",
+      desc: "La joya de la corona: Carne premium finamente seleccionada, nuestra exclusiva alternativa de grano sin gluten y un bouquet de especias secretas.",
       price: "₡14,500",
       image: "https://images.unsplash.com/photo-1544124499-58912cbddaad?q=80&w=800&auto=format&fit=crop",
       size: "small"
     },
     {
       name: "Shawarma Royal",
-      desc: "Láminas de cordero marinado durante 48 horas, servido con la esencia del ajo y vegetales de nuestra huerta.",
+      desc: "Láminas de cordero marinado durante 48 horas, servido con crema de ajo artesanal 100% GF y vegetales de nuestra huerta.",
       price: "₡16,900",
       image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=800&auto=format&fit=crop",
       size: "small"
     },
     {
       name: "Baklava de Bekaa",
-      desc: "Delicadas láminas de hojaldre hechas a mano, pistachos de primera y el suave aroma del azahar.",
+      desc: "Delicadas láminas de hojaldre artesanal sin gluten hechas a mano, pistachos de primera y el suave aroma del azahar.",
       price: "₡6,500",
       image: "https://images.unsplash.com/photo-1519676867240-f03562e64548?q=80&w=800&auto=format&fit=crop",
       size: "large"

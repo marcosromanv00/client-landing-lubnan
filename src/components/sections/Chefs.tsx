@@ -9,15 +9,15 @@ const chefs = [
     id: 0,
     name: "Layla Mansour",
     role: "Chef Pastelera",
-    bio: "Especialista en dulces árabes tradicionales. Sus baklavas y postres de azahar son el final perfecto para una experiencia de gala.",
+    bio: "Artesana de la repostería fina. Layla redefine el concepto de dulces árabes, logrando texturas perfectas y aromas de azahar en creaciones 100% sin gluten que desafían lo convencional.",
     tag: "Especialista en Dulces de Azahar",
     image: "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 1,
-    name: "Mario Gheyad",
+    name: "Mario Zaghloul",
     role: "Proprietario & Chef Ejecutivo",
-    bio: "Con más de 25 años de maestría culinaria, el Chef Mario trae los secretos de Beirut a la mesa de Lubnan. Su pasión por la autenticidad define cada platillo.",
+    bio: "Maestro de la gastronomía libanesa con más de 30 años de trayectoria. Mario Zaghloul ha transformado la herencia culinaria de su familia en una experiencia de gala, siendo pionero en la alta cocina libanesa 100% libre de gluten.",
     tag: "Maestro de la Cocina Libanesa",
     image: "/assets/Mario.jpg"
   },
@@ -25,7 +25,7 @@ const chefs = [
     id: 2,
     name: "Ahmad Khalil",
     role: "Sous Chef",
-    bio: "Mano derecha en la cocina, Ahmad asegura que cada ingrediente mantenga la frescura y calidad que exige la alta cocina libanesa.",
+    bio: "Custodio de la calidad y el sabor. Ahmad supervisa cada técnica de cocción lenta y la selección de especias, asegurando que cada mezzé mantenga la frescura y autenticidad que define a Lubnan.",
     tag: "Experto en Mezze Tradicional",
     image: "/assets/Ahmad.png"
   }

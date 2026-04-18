@@ -16,13 +16,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Lubnan - Experiencia Culinaria Libanesa de Alta Lujo",
-  description: "Descubre los sabores auténticos del Líbano en el corazón de Costa Rica. Una fusión perfecta entre tradición milenaria y sofisticación moderna.",
-  keywords: ["Lubnan", "Restaurante Libanés", "Comida Libanesa Costa Rica", "Alta Gastronomía", "Lujo", "Paseo Colón", "Catering Líbano"],
+  title: "Lubnan - Alta Gastronomía Libanesa | 100% Sin Gluten",
+  description: "El primer restaurante libanés de alta gama 100% libre de gluten en Costa Rica. Tradición milenaria, pureza absoluta y una experiencia sensorial de gala.",
+  keywords: ["Lubnan", "Restaurante Libanés", "Sin Gluten", "Gluten Free Costa Rica", "Comida Libanesa", "Alta Gastronomía", "Paseo Colón", "Mario Zaghloul"],
   authors: [{ name: "Lubnan Costa Rica" }],
   openGraph: {
-    title: "Lubnan - Experiencia Culinaria Libanesa de Alta Lujo",
-    description: "Descubre los sabores auténticos del Líbano en el corazón de Costa Rica.",
+    title: "Lubnan - Alta Gastronomía Libanesa | 100% Sin Gluten",
+    description: "Descubre la pureza de la cocina libanesa 100% libre de gluten en el corazón de San José.",
     url: "https://lubnan.cr",
     siteName: "Lubnan",
     images: [
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lubnan - Experiencia Culinaria Libanesa de Alta Lujo",
-    description: "Alta gastronomía libanesa en el corazón de San José.",
+    title: "Lubnan - Alta Gastronomía Libanesa | 100% Sin Gluten",
+    description: "Alta gastronomía libanesa 100% libre de gluten en el corazón de San José.",
     images: ["/assets/Foto-2-1-1-e1564518936394.jpg"],
   },
   icons: {

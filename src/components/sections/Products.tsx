@@ -7,24 +7,24 @@ import { fadeIn, staggerContainer, textVariant } from "@/lib/animations";
 export default function Products() {
   const products = [
     {
-      name: "Hummus Tradicional",
-      category: "Dip Premium",
-      image: "/assets/packaged_hummus_lubnan_1776302646293.png",
+      name: "Hummus de Autor",
+      category: "Dip 100% Sin Gluten",
+      image: "/assets/hummus_premium.png",
     },
     {
       name: "Za'atar Artesanal",
-      category: "Especias Finas",
-      image: "/assets/packaged_zaatar_lubnan_1776302663908.png",
+      category: "Especias Puras GF",
+      image: "/assets/zaatar_premium.png",
     },
     {
-      name: "Aceite de Oliva",
-      category: "Importado de Gala",
-      image: "/assets/packaged_olive_oil_lubnan_1776302679618.png",
+      name: "Aceite de Oliva Koura",
+      category: "Importado de Líbano",
+      image: "/assets/olive_oil_premium.png",
     },
     {
-      name: "Baba Ganoush",
-      category: "Gourmet Mezze",
-      image: "/assets/packaged_baba_ganoush_lubnan_1776302697423.png",
+      name: "Baba Ganoush Real",
+      category: "Gourmet Sin Gluten",
+      image: "/assets/baba_ganoush_premium.png",
     },
   ];
 
@@ -59,9 +59,7 @@ export default function Products() {
             variants={fadeIn("up", 0.4)}
             className="max-w-2xl mx-auto text-gray-600 font-body text-lg leading-relaxed italic"
           >
-            Nuestros productos artesanales, ahora disponibles para disfrutar el
-            alma del Líbano en casa. Una experiencia de gala en su propia
-            cocina.
+            Lleve la pureza del Líbano a su cocina. Nuestra línea de productos premium es 100% artesanal, certificada libre de gluten y diseñada para elevar cada momento en casa.
           </motion.p>
         </div>
 

@@ -62,7 +62,7 @@ export default function Hero() {
           >
             <div className="h-[1px] w-12 bg-golden-hummus/50" />
             <h2 className="text-xl md:text-3xl font-display font-light italic tracking-wide text-ivory drop-shadow-md">
-              Alta gastronomía libanesa
+              Alta gastronomía libanesa · 100% Sin Gluten
             </h2>
             <div className="h-[1px] w-12 bg-golden-hummus/50" />
           </motion.div>
@@ -71,7 +71,7 @@ export default function Hero() {
             variants={fadeIn("up", 0.6)}
             className="text-sm md:text-lg font-body max-w-xl mx-auto mb-12 text-ivory leading-relaxed font-light tracking-wide drop-shadow-sm"
           >
-            Una odisea sensorial donde la tradición milenaria se encuentra con la sofistización contemporánea.
+            Donde la esencia milenaria del Líbano se fusiona con la pureza de una cocina 100% libre de gluten. Una odisea sensorial sin concesiones.
           </motion.p>
           
           <motion.div 

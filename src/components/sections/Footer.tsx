@@ -20,7 +20,7 @@ export default function Footer() {
           <motion.div variants={fadeIn("up", 0.1)} className="space-y-8">
             <h2 className="text-4xl font-display font-medium tracking-[0.3em] uppercase text-golden-hummus">Lubnan</h2>
             <p className="text-gray-400 text-sm leading-relaxed font-body max-w-xs uppercase tracking-widest text-[10px]">
-              Experiencia culinaria libanesa de lujo en el corazón de Costa Rica. Pasión por la tradición, elegancia en el servicio.
+              El primer restaurante libanés de alta gama 100% libre de gluten en Costa Rica. Tradición milenaria, pureza absoluta.
             </p>
             <div className="flex gap-4">
               {[
@@ -94,7 +94,10 @@ export default function Footer() {
               </li>
               <li className="flex gap-4 text-[11px] text-gray-400 uppercase tracking-widest">
                 <Phone size={18} className="shrink-0 text-white" />
-                <a href="tel:+50686600707" className="hover:text-brand-red transition-colors cursor-pointer">+506 8660-0707</a>
+                <div className="flex flex-col gap-2">
+                  <a href="tel:+50622576071" className="hover:text-brand-red transition-colors cursor-pointer">+506 2257-6071</a>
+                  <a href="tel:+50686600707" className="hover:text-brand-red transition-colors cursor-pointer">+506 8660-0707</a>
+                </div>
               </li>
               <li className="flex gap-4 text-[11px] text-gray-400 uppercase tracking-widest">
                 <Mail size={18} className="shrink-0 text-white" />
